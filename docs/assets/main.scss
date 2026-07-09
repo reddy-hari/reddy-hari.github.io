@@ -1,0 +1,128 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+// =====================================================================
+//  Dark theme
+//  Minima 2.5 hardcodes its colors, so dark mode is expressed as a set
+//  of overrides scoped under html[data-theme="dark"]. The theme is set
+//  on <html> by an inline script in _includes/head.html (no flash).
+// =====================================================================
+
+$dark-bg:        #1b1e21;
+$dark-surface:   #22272e;
+$dark-text:      #e6e6e6;
+$dark-muted:     #9aa0a6;
+$dark-border:    #3a3f44;
+$dark-link:      #6ab0f3;
+$dark-link-vis:  #a48cf0;
+
+// Smooth the switch between themes.
+body,
+a,
+.site-header,
+.site-nav .page-link,
+pre, code,
+.cv-tag {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+html[data-theme="dark"] {
+  body {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  a         { color: $dark-link; }
+  a:visited { color: $dark-link-vis; }
+  a:hover   { color: #ffffff; }
+
+  .site-header {
+    border-top-color: $dark-border;
+    border-bottom-color: darken($dark-border, 6%);
+  }
+  .site-title,
+  .site-title:visited { color: $dark-text; }
+  .site-nav .page-link { color: #cfd3d7; }
+
+  .site-footer { border-top-color: darken($dark-border, 6%); }
+  .footer-col-wrapper,
+  .post-meta,
+  .svg-icon        { color: $dark-muted; fill: $dark-muted; }
+
+  blockquote {
+    color: $dark-muted;
+    border-left-color: $dark-border;
+  }
+
+  pre, code {
+    background-color: $dark-surface;
+    border-color: $dark-border;
+  }
+
+  table {
+    color: #cfd3d7;
+    border-color: $dark-border;
+    tr:nth-child(even) { background-color: lighten($dark-bg, 3%); }
+    th { background-color: $dark-surface; border-color: $dark-border; }
+    td { border-color: $dark-border; }
+  }
+
+  // Mobile collapsed nav box
+  .site-nav {
+    @include media-query($on-palm) {
+      background-color: $dark-bg;
+      border-color: $dark-border;
+      .menu-icon > svg { fill: #cfd3d7; }
+    }
+  }
+
+  // ---- CV page ----
+  .cv-label,
+  .cv-contact,
+  .cv-item-date    { color: $dark-muted; }
+  .cv-section > h2 { border-bottom-color: $dark-border; }
+  .cv-item         { border-left-color: $dark-border; }
+  .cv-item::before,
+  .cv-item-subtitle { color: $dark-link; }
+  .cv-item::before  { background: $dark-link; }
+  .cv-tag {
+    background: $dark-surface;
+    border-color: $dark-border;
+  }
+}
+
+// =====================================================================
+//  Theme toggle button (in the site header)
+// =====================================================================
+
+#theme-toggle {
+  float: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 18px;
+  color: #555;
+  line-height: $base-line-height * $base-font-size * 2.25; // match .site-nav
+
+  svg { width: 20px; height: 20px; vertical-align: middle; fill: currentColor; }
+  .icon-sun { display: none; }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: 55px;          // sit just left of the hamburger menu
+    line-height: 36px;
+    height: 36px;
+    z-index: 3;
+  }
+}
+
+html[data-theme="dark"] #theme-toggle {
+  color: #cfd3d7;
+  .icon-sun  { display: inline; }
+  .icon-moon { display: none; }
+}

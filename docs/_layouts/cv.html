@@ -1,0 +1,112 @@
+---
+layout: default
+---
+{%- assign cv = site.data.cv -%}
+<style>
+  .cv { max-width: 46rem; }
+  .cv-header { margin-bottom: 2rem; }
+  .cv-header h1 { margin-bottom: .1rem; }
+  .cv-label { font-size: 1.1rem; color: #828282; margin: 0 0 .6rem; }
+  .cv-contact { font-size: .9rem; color: #828282; }
+  .cv-contact a { color: inherit; }
+  .cv-contact span + span::before { content: "·"; margin: 0 .5rem; }
+  .cv-summary { margin-top: .8rem; }
+
+  .cv-section { margin-top: 2.4rem; }
+  .cv-section > h2 {
+    font-size: 1.3rem;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: .3rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* timeline */
+  .cv-item {
+    position: relative;
+    padding-left: 1.4rem;
+    padding-bottom: 1.5rem;   /* padding (not margin) keeps the line continuous */
+    border-left: 2px solid #e8e8e8;
+  }
+  .cv-item:last-child { padding-bottom: 0; }
+  .cv-item::before {
+    content: "";
+    position: absolute;
+    left: -6px; top: .35rem;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #2a7ae2;
+  }
+  .cv-item-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .3rem;
+  }
+  .cv-item-title { font-weight: 600; }
+  .cv-item-date { font-size: .85rem; color: #828282; white-space: nowrap; }
+  .cv-item-subtitle { color: #2a7ae2; font-size: .95rem; margin-bottom: .3rem; }
+  .cv-item ul { margin: .3rem 0 0; padding-left: 1.1rem; }
+  .cv-item li { margin-bottom: .2rem; }
+
+  /* tags */
+  .cv-tag-group { margin-bottom: .9rem; }
+  .cv-tag-group-name { font-weight: 600; margin-bottom: .4rem; }
+  .cv-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .cv-tag {
+    background: #f4f6fb;
+    border: 1px solid #e2e8f5;
+    border-radius: 999px;
+    padding: .2rem .7rem;
+    font-size: .85rem;
+  }
+</style>
+
+<article class="cv">
+  <header class="cv-header">
+    <h1>{{ cv.basics.name }}</h1>
+    {%- if cv.basics.label %}<p class="cv-label">{{ cv.basics.label }}</p>{% endif -%}
+    <p class="cv-contact">
+      {%- if cv.basics.email %}<span><a href="mailto:{{ cv.basics.email }}">{{ cv.basics.email }}</a></span>{% endif -%}
+      {%- if cv.basics.location != "" %}<span>{{ cv.basics.location }}</span>{% endif -%}
+      {%- for p in cv.basics.profiles %}<span><a href="{{ p.url }}">{{ p.network }}</a></span>{% endfor -%}
+    </p>
+    {%- if cv.basics.summary %}<p class="cv-summary">{{ cv.basics.summary }}</p>{% endif -%}
+  </header>
+
+  {%- for section in cv.sections %}
+  <section class="cv-section">
+    <h2>{{ section.title }}</h2>
+
+    {%- if section.type == "timeline" %}
+      {%- for item in section.items %}
+      <div class="cv-item">
+        <div class="cv-item-head">
+          <span class="cv-item-title">{{ item.title }}</span>
+          {%- if item.date %}<span class="cv-item-date">{{ item.date }}</span>{% endif -%}
+        </div>
+        {%- if item.subtitle %}<div class="cv-item-subtitle">{{ item.subtitle }}</div>{% endif -%}
+        {%- if item.description %}
+        <ul>
+          {%- for line in item.description %}<li>{{ line }}</li>{% endfor -%}
+        </ul>
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+
+    {%- elsif section.type == "tags" %}
+      {%- for group in section.items %}
+      <div class="cv-tag-group">
+        {%- if group.name %}<div class="cv-tag-group-name">{{ group.name }}</div>{% endif -%}
+        <div class="cv-tags">
+          {%- for tag in group.tags %}<span class="cv-tag">{{ tag }}</span>{% endfor -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    {%- endif -%}
+
+  </section>
+  {%- endfor -%}
+
+  {{ content }}
+</article>

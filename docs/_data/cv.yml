@@ -1,0 +1,64 @@
+# CV / résumé data. Edit this file to update the CV page — the layout
+# renders everything below automatically. Delete or add items freely.
+
+basics:
+  name: Hari Reddy
+  label: Software Engineer            # your headline / role
+  email: harireddy05@gmail.com
+  location: ""                        # e.g. "San Francisco, CA"
+  summary: >-
+    Short professional summary goes here. One or two sentences on who you
+    are and what you do.
+  profiles:
+    - network: GitHub
+      username: reddy-hari
+      url: https://github.com/reddy-hari
+    # - network: LinkedIn
+    #   username: your-handle
+    #   url: https://www.linkedin.com/in/your-handle
+
+# Each section has a `title`, a `type`, and `items`.
+#   type: timeline  -> title / subtitle / date / description(list)
+#   type: tags      -> a flat list of skill strings grouped by `name`
+sections:
+  - title: Education
+    type: timeline
+    items:
+      - title: B.S. in Computer Science
+        subtitle: Your University
+        date: 2018 – 2022
+        description:
+          - Relevant coursework, honors, or thesis.
+          - GPA / distinctions if you want them here.
+
+  - title: Experience
+    type: timeline
+    items:
+      - title: Software Engineer
+        subtitle: Company Name
+        date: 2022 – Present
+        description:
+          - Led / built / shipped something impactful.
+          - Quantified result — improved X by Y%.
+      - title: Software Engineering Intern
+        subtitle: Earlier Company
+        date: Summer 2021
+        description:
+          - What you worked on.
+
+  - title: Projects
+    type: timeline
+    items:
+      - title: Project Name
+        subtitle: Tech stack
+        date: 2023
+        description:
+          - What it does and why it matters.
+
+  - title: Skills
+    type: tags
+    items:
+      - name: Languages
+        tags: [Python, JavaScript, Go, SQL]
+      - name: Tools & Frameworks
+        tags: [React, Jekyll, Docker, Git]

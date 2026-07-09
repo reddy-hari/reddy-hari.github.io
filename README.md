@@ -1,6 +1,6 @@
 # reddy-hari.github.io
 
-My Space
+My Space this
 
-Local Preview Run Command
-> bundle exec jekyll serve
+Local Preview Run Command (the site lives in `docs/`)
+> cd docs && bundle exec jekyll serve
