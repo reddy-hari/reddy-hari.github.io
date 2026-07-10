@@ -3,19 +3,19 @@
 
 basics:
   name: Hari Reddy
-  label: Software Engineer            # your headline / role
+  # label: Software Engineer # your headline / role
   email: harireddy05@gmail.com
-  location: ""                        # e.g. "San Francisco, CA"
+  # location: "" # e.g. "San Francisco, CA"
   summary: >-
-    Short professional summary goes here. One or two sentences on who you
-    are and what you do.
+    I'm a Senior Software Engineer with 10+ years of experience building software across many industries. 
+    I work on systems that power enterprise capabilities, but at heart always a full-stack generalist who enjoys owning problems end to end.
   profiles:
     - network: GitHub
       username: reddy-hari
       url: https://github.com/reddy-hari
-    # - network: LinkedIn
-    #   username: your-handle
-    #   url: https://www.linkedin.com/in/your-handle
+    - network: LinkedIn
+      username: reddyharikrishna
+      url: https://www.linkedin.com/in/reddyharikrishna/
 
 # Each section has a `title`, a `type`, and `items`.
 #   type: timeline  -> title / subtitle / date / description(list)
@@ -24,41 +24,94 @@ sections:
   - title: Education
     type: timeline
     items:
-      - title: B.S. in Computer Science
-        subtitle: Your University
-        date: 2018 – 2022
-        description:
-          - Relevant coursework, honors, or thesis.
-          - GPA / distinctions if you want them here.
+      - title: M.S. in Computer Science & Engineering
+        subtitle: University of Texas, Arlington
+        date: 2018 – 2019
+        # description:
+        #   - Software Engineering Major and Data Analysis Minor
+        #   - GPA 3.58
+      - title: B.E. in Computer Science & Engineering
+        subtitle: University of Puné, Pimpri Chinchwad
+        date: 2010 – 2014
+        # description:
+        #   - Computer Science Major
+        #   - First Class
 
   - title: Experience
     type: timeline
     items:
       - title: Software Engineer
-        subtitle: Company Name
-        date: 2022 – Present
+        subtitle: Zions Bancorporation
+        date: March 2024 – Present
         description:
-          - Led / built / shipped something impactful.
-          - Quantified result — improved X by Y%.
-      - title: Software Engineering Intern
-        subtitle: Earlier Company
-        date: Summer 2021
+          - Designed and developed core microservices and APIs for metadata exchange and governance integration, driving the architecture toward an event-driven, API-first model.
+          - Owned the technical operation and enhancement of enterprise data governance platforms — Collibra for cataloging and BigID for discovery and classification — including integrations with custom-built solutions.
+          - Engineered customized data profiling solutions and contributed to a self-service Governance Portal that automated discovery, classification, attestation, and compliance across the data lake and EDW.
+          - Served as team security champion, managing SCA report findings and mitigations, and partnered with the Enterprise Data Governance team to turn new standards and policies into automated, technically feasible solutions.
+      - title: Software Engineer
+        subtitle: Financial Industry Regulatory Authority
+        date: March 2022 - March 2024
         description:
-          - What you worked on.
+          - Built internal tooling and data pipelines that transformed raw, undelimited data into standardized, analytics-ready reports powering business intelligence and reporting across the organization.
+          - Developed query engine and ETL features that let technical teams define custom data flows, combine multiple sources, and process large-scale datasets efficiently.
+          - Drove delivery while collaborating cross-functionally to improve data accessibility and reliability. in an Agile Scrum environment.
+          - Maintained exceptional quality standards, achieving 90% test coverage and keeping post-release defects under 5%.
+      - title: Software Engineer
+        subtitle: Microsoft
+        date: March 2020 - March 2022
+        description:
+          - Developed feature enhancements for a large-scale enterprise B2B product within the Microsoft Dynamics 365 suite, contributing to a product used by customers worldwide.
+          - Built accessible, standards-compliant UI components with a strong focus on WCAG and accessibility (A11y) best practices.
+          - Resolved customer-reported and live-site incidents in real time, ensuring product reliability and a smooth user experience.
+          - Established testing and build infrastructure from the ground up — including an automated test suite integrated into the CI/CD pipeline — and partnered with technical teams and management to gather requirements and shape technical designs.
+      - title: Software Engineer (Research Assistant)
+        subtitle: The University of Texas at Arlington Research Institute
+        date: March 2022 - March 2024
+        description:
+          - Developed cross-platform interfaces for medical device prototypes, bridging hardware and software to bring research concepts to functional products.
+          - Built patient data reporting and analytics portals with interactive reports and graph visualizations for online viewing.
+          - Modernized a legacy codebase into a current cross-platform stack, improving compatibility and maintainability.
+          - Owned projects end to end — from idea and design through production deployment — while ensuring quality through firmware data testing and UI integration testing.
+      - title: Software Engineer
+        subtitle: Accenture
+        date: May 2015 - December 2017
+        description:
+          - Developed modules for a healthcare claims analytics application, enabling users to retrieve, view, amend, and process claim requests across a full-stack architecture.
+          - Built and maintained a government eligibility enforcement portal handling claims for child support, unemployment, and other public benefit services.
+          - Designed asynchronous features and handled design change requests and production defects, ensuring responsive, reliable applications for enterprise clients.
+          - Owned test strategy and quality processes end to end — from automation proof-of-concepts for the CI/CD pipeline to defect lifecycle tracking, root cause analysis, and requirement traceability.
+      - title: Software Engineer
+        subtitle: GO MO Group
+        date: May 2015 - December 2017
+        description:
+          - Developed and maintained responsive, cross-browser websites for client businesses, building custom UI and web functionality while upholding brand and client standards.
+          - Executed SEO strategies that improved search rankings and organic visibility across multiple client websites.
+          - Created content and managed digital marketing campaigns — including social media marketing, on-page optimization, and audience engagement initiatives.
+          - Built and customized CMS-driven websites (WordPress) and integrated third-party services, delivering polished web experiences in a fast-paced, client-focused environment.
 
-  - title: Projects
-    type: timeline
-    items:
-      - title: Project Name
-        subtitle: Tech stack
-        date: 2023
-        description:
-          - What it does and why it matters.
+  # - title: Projects
+  #   type: timeline
+  #   items:
+  #     - title: Project Name
+  #       subtitle: Tech stack
+  #       date: 2023
+  #       description:
+  #         - What it does and why it matters.
 
   - title: Skills
     type: tags
     items:
       - name: Languages
-        tags: [Python, JavaScript, Go, SQL]
-      - name: Tools & Frameworks
-        tags: [React, Jekyll, Docker, Git]
+        tags: [Python, JavaScript, TypeScript, Java, Ruby]
+      - name: Frontend
+        tags: [React, Angular, Vue, Redux, HTML, CSS]
+      - name: Backend
+        tags: [FastAPI, Node, Express, Spring Boot]
+      - name: Databases
+        tags: [PostgreSQL, SQL Server, Kusto, MongoDB]
+      - name: Cloud
+        tags: [GCP, AWS, Azure]
+      - name: DevOps & Infrastructure
+        tags: [Docker, Kubernetes, Helm, Jenkins, Azure DevOps, Git]
+      - name: AI & Emerging Tech
+        tags: [LLMs, RAG, MCP, Agentic AI, Prompt Engineering, Vector Databases]

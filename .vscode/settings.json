@@ -1,0 +1,8 @@
+{
+  // This project's YAML is Jekyll config + custom _data files (e.g. cv.yml),
+  // which don't match any published JSON schema. Without this, the YAML
+  // extension auto-matches an online schema from SchemaStore and wrongly
+  // flags custom keys like "basics"/"sections" as "not allowed".
+  // This is editor-only; it does not affect the Jekyll build.
+  "yaml.schemaStore.enable": false
+}
