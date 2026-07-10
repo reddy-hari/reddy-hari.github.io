@@ -1,0 +1,48 @@
+# Publications. The /research/ page renders everything below automatically,
+# grouped by year, newest first. Add or delete entries freely.
+#
+# Only `title` and `year` are required. Every other field is optional and is
+# simply omitted from the page when absent.
+#
+#   authors:  list of names. Any name matching `author_name` below is bolded.
+#   venue:    journal, conference, or publisher
+#   abstract: shown behind a collapsible "abstract" toggle
+#   pdf / doi / arxiv / code / slides / bib:  each renders a link button.
+#             `pdf` may be a site path (/assets/pdf/foo.pdf) or a full URL.
+#
+# Wrap a value in "double quotes" if it contains a colon followed by a space,
+# a leading `#`, or starts with `[` or `{` — YAML reads those as syntax.
+# Subtitled paper titles need this: "Main title: the subtitle".
+#
+# Example entry — replace with your own:
+#
+#   - title: A Cross-Platform Interface for Wearable Medical Device Prototypes
+#     authors:
+#       - Hari Reddy
+#       - Jane Coauthor
+#     venue: IEEE Engineering in Medicine & Biology Conference
+#     year: 2019
+#     abstract: >-
+#       One paragraph describing the work. Line breaks here are folded into
+#       a single paragraph, so indent continuation lines like this.
+#     pdf: /assets/pdf/wearable-interface.pdf
+#     doi: https://doi.org/10.1000/example
+#     arxiv: https://arxiv.org/abs/0000.00000
+#     code: https://github.com/reddy-hari/example
+#     selected: true
+
+# The name to bold in author lists.
+author_name: Hari Reddy
+
+publications:
+  - title: "Overview of algorithms in educational data mining for higher education: An application perspective"
+    authors:
+      - Dipesh Walte
+      - Hari Reddy
+      - Vivek Ugale
+      - Amol Unwane
+    venue: International Journal of Engineering Research & Technology (IJERT)
+    year: 2014
+    abstract: >-
+      Even with the ever increasing Data Generated in the Higher Educational Sector, most of the colleges still use classic statistical and regression techniques for Decision Making purpose. Educational Data Mining (EDM) proposes various approaches to procure meaningful information and eventually knowledge which would greatly benefit the Higher Educational Institutes to Improve the function of their various activities. We intend to summarise the various applications of these techniques.
+    selected: true

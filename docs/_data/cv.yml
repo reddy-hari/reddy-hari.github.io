@@ -108,7 +108,7 @@ sections:
       - name: Backend
         tags: [FastAPI, Node, Express, Spring Boot]
       - name: Databases
-        tags: [PostgreSQL, SQL Server, Kusto, MongoDB]
+        tags: [PostgreSQL, mySQL, SQL Server, Kusto, MongoDB]
       - name: Cloud
         tags: [GCP, AWS, Azure]
       - name: DevOps & Infrastructure

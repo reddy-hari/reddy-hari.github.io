@@ -38,6 +38,7 @@ plugins:
 # (The site title/name is intentionally not shown in the nav.)
 header_pages:
   - about.markdown
+  - research.markdown
   - cv.markdown
 
 # Exclude from processing.

@@ -25,7 +25,8 @@ a,
 .site-header,
 .site-nav .page-link,
 pre, code,
-.cv-tag {
+.cv-tag,
+.pub-link {
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
@@ -91,6 +92,20 @@ html[data-theme="dark"] {
   .cv-tag {
     background: $dark-surface;
     border-color: $dark-border;
+  }
+
+  // ---- Research / publications page ----
+  .pubs-empty,
+  .pub-abstract > summary { color: $dark-muted; }
+  .pub-year > h2   { border-bottom-color: $dark-border; }
+  .pub             { border-left-color: $dark-border; }
+  .pub::before     { background: $dark-link; }
+  .pub-venue       { color: $dark-link; }
+  .pub-link {
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-text;
+    &:hover { background: lighten($dark-surface, 6%); color: #ffffff; }
   }
 }
 
