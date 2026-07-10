@@ -48,7 +48,7 @@ html[data-theme="dark"] {
   .site-nav .page-link { color: #cfd3d7; }
 
   .site-footer { border-top-color: darken($dark-border, 6%); }
-  .footer-col-wrapper,
+  .footer-copy,
   .post-meta,
   .svg-icon        { color: $dark-muted; fill: $dark-muted; }
 
@@ -91,6 +91,41 @@ html[data-theme="dark"] {
   .cv-tag {
     background: $dark-surface;
     border-color: $dark-border;
+  }
+}
+
+// =====================================================================
+//  Footer — a single copyright line (see _includes/footer.html)
+// =====================================================================
+
+.site-footer {
+  padding: $spacing-unit 0;
+}
+
+.footer-copy {
+  margin-bottom: 0;
+  font-size: $small-font-size;
+  color: $grey-color;
+  text-align: center;
+}
+
+// =====================================================================
+//  Profile image (about / home page)
+// =====================================================================
+
+.profile {
+  display: block;
+  float: right;
+  width: 250px;
+  max-width: 40%;
+  margin: 0 0 1rem 1.8rem;
+  border-radius: 8px;        // set to 50% for a circular photo
+
+  @include media-query($on-palm) {
+    float: none;
+    width: 220px;
+    max-width: 70%;
+    margin: 0 auto 1.5rem;   // center above the text on small screens
   }
 }
 
