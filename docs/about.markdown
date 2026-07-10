@@ -16,4 +16,4 @@ This path has made me a genuine full-stack generalist. I've shipped production c
 
 I like owning problems end to end, from data model to API to the interface someone actually uses. And I care about the craft: accessible UIs, clean architectures, and systems built to evolve rather than just ship.
 
-Outside of work, I'm a jack of many trades: a former footballer who once dreamed of going pro, a sometime writer of poetry and stories, a PC-building tech enthusiast (Ryzen 9, RTX 5080, all RGB), a decent cook and handyman, and a lover of good anime, stories, and music. My best gigs, though, are at home — husband, dad to the cutest daughter, and loyal servant to a French Bulldog.
+Outside of work, I'm a jack of many trades: a former footballer who once dreamed of going pro, a sometime writer of poetry and stories, a PC-building tech enthusiast, a decent cook and handyman, and a lover of good anime, stories, and music. My best gigs, though, are at home — husband, dad to the cutest daughter, and loyal servant to a French Bulldog.
