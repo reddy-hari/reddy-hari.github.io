@@ -56,8 +56,6 @@ layout: default
 </style>
 
 <article class="pubs">
-  <h1>{{ page.title | capitalize }}</h1>
-
   {%- assign intro = content | strip -%}
   {%- if intro != "" %}<div class="pubs-intro">{{ content }}</div>{% endif -%}
 

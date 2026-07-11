@@ -1,6 +1,6 @@
 ---
 layout: cv
-title: résumé
+title: cv
 permalink: /cv/
 ---
 

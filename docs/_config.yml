@@ -35,10 +35,11 @@ plugins:
   - jekyll-feed
 
 # Nav bar: which pages appear as tabs, and in what order.
-# (The site title/name is intentionally not shown in the nav.)
+# (The site title/name is shown in the header on every page except home.)
 header_pages:
   - about.markdown
   - research.markdown
+  - activities.markdown
   - cv.markdown
 
 # Exclude from processing.

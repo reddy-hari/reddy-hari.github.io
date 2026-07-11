@@ -2,6 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Use Ubuntu across the site (loaded via Google Fonts in _includes/head.html).
+// Set before the import so it overrides Minima's !default value.
+$base-font-family: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 @import "minima";
 
 // =====================================================================
@@ -30,6 +34,23 @@ pre, code,
   transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 }
 
+// =====================================================================
+//  Site-nav links — no underline; bold on hover; the current page's
+//  link stays bold and takes the link color.
+// =====================================================================
+
+.site-nav .page-link {
+  &:hover {
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  &[aria-current="page"] {
+    font-weight: 700;
+    color: $brand-color;
+  }
+}
+
 html[data-theme="dark"] {
   body {
     background-color: $dark-bg;
@@ -47,6 +68,7 @@ html[data-theme="dark"] {
   .site-title,
   .site-title:visited { color: $dark-text; }
   .site-nav .page-link { color: #cfd3d7; }
+  .site-nav .page-link[aria-current="page"] { color: $dark-link; }
 
   .site-footer { border-top-color: darken($dark-border, 6%); }
   .footer-copy,
@@ -106,6 +128,40 @@ html[data-theme="dark"] {
     border-color: $dark-border;
     color: $dark-text;
     &:hover { background: lighten($dark-surface, 6%); color: #ffffff; }
+  }
+
+  // ---- Activities page ----
+  .acts-empty   { color: $dark-muted; }
+  .act {
+    background: $dark-surface;
+    border-color: $dark-border;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    &:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, .4); }
+  }
+  .act-tagline  { color: $dark-link; }
+  .act-pill {
+    background: lighten($dark-surface, 5%);
+    border-color: $dark-border;
+    color: $dark-muted;
+  }
+  .act-link {
+    background: lighten($dark-surface, 5%);
+    border-color: $dark-border;
+    color: $dark-text;
+    &:hover { background: lighten($dark-surface, 10%); color: #ffffff; }
+  }
+}
+
+// =====================================================================
+//  Justify body text across the site. hyphens: auto softens the wide
+//  word gaps justification can otherwise open up in a narrow column.
+// =====================================================================
+
+.page-content {
+  p,
+  li {
+    text-align: justify;
+    hyphens: auto;
   }
 }
 

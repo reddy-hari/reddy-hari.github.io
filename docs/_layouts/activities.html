@@ -1,0 +1,85 @@
+---
+layout: default
+---
+{%- assign data = site.data.activities -%}
+{%- assign activities = data.activities -%}
+<style>
+  .acts { max-width: 46rem; }
+  .acts-intro { margin-bottom: 2rem; }
+
+  .act {
+    background: #fff;
+    border: 1px solid #e2e8f5;
+    border-radius: 12px;
+    padding: 1.3rem 1.4rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, .06);
+    transition: box-shadow .15s ease, transform .15s ease;
+  }
+  .act:last-child { margin-bottom: 0; }
+  .act:hover {
+    box-shadow: 0 6px 18px rgba(16, 24, 40, .10);
+    transform: translateY(-2px);
+  }
+  .act-name { font-weight: 600; font-size: 1.1rem; }
+  .act-tagline { color: #2a7ae2; font-size: .95rem; margin-top: .1rem; }
+  .act-desc { margin-top: .5rem; }
+
+  .act-meta { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+  .act-pill {
+    background: #f4f6fb;
+    border: 1px solid #e2e8f5;
+    border-radius: 999px;
+    padding: .2rem .7rem;
+    font-size: .85rem;
+    color: #828282;
+  }
+
+  .act-links { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+  .act-link {
+    background: #f4f6fb;
+    border: 1px solid #e2e8f5;
+    border-radius: 999px;
+    padding: .2rem .7rem;
+    font-size: .85rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .act-link:hover { background: #e8eefb; color: inherit; text-decoration: none; }
+
+  .acts-empty { color: #828282; }
+</style>
+
+<article class="acts">
+  {%- assign intro = content | strip -%}
+  {%- if intro != "" %}<div class="acts-intro">{{ content }}</div>{% endif -%}
+
+  {%- if activities == empty %}
+  <p class="acts-empty">Nothing listed yet.</p>
+  {%- else -%}
+
+  {%- for act in activities %}
+  <div class="act">
+    <div class="act-name">{{ act.name }}</div>
+    {%- if act.tagline %}<div class="act-tagline">{{ act.tagline }}</div>{% endif -%}
+    {%- if act.description %}<div class="act-desc">{{ act.description }}</div>{% endif -%}
+
+    {%- if act.meta %}
+    <div class="act-meta">
+      {%- for m in act.meta %}<span class="act-pill">{{ m }}</span>{% endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- if act.links %}
+    <div class="act-links">
+      {%- for link in act.links -%}
+        {%- assign href = link.url -%}
+        {%- unless href contains "://" %}{% assign href = href | relative_url %}{% endunless -%}
+        <a class="act-link" href="{{ href }}">{{ link.label }}</a>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+  {%- endfor -%}
+  {%- endif -%}
+</article>

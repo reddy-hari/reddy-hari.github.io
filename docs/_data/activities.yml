@@ -1,0 +1,30 @@
+# Extracurricular activities. The /activities/ page renders everything below
+# automatically. Add or delete entries freely.
+#
+# Only `name` is required. Every other field is optional and is simply omitted
+# from the page when absent.
+#
+#   tagline:     short line shown under the name (e.g. a role or one-liner)
+#   description: a sentence or two of detail
+#   meta:        list of small facts shown as pills (ids, ratings, dates, …)
+#   links:       list of { label, url } — each renders a link button
+#
+# Wrap a value in "double quotes" if it contains a colon followed by a space,
+# a leading `#`, or starts with `[` or `{` — YAML reads those as syntax.
+
+activities:
+  - name: A College Diary
+    tagline: Author — Hari Reddy
+    description: >-
+      A book I wrote and published — a coming-of-age story drawn from college life.
+    links:
+      - label: Amazon
+        url: https://www.amazon.com/dp/1544820321?lv=shuf&channelId=500&plpRedirect=mhFallback
+
+  - name: Table Tennis Collegiate player
+    tagline: "NCTTA Player #17378 — Rated 745"
+    description: >-
+      Represented UT Arlington at the NCTTA College Tournament '18 at Wesleyan.
+    links:
+      - label: National Collegiate Table Tennis Association
+        url: https://www.nctta.org/

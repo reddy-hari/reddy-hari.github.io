@@ -1,23 +1,22 @@
 ---
 layout: default
-title: about
+title: Hari Reddy
+nav_title: about
 permalink: /
 ---
 
-## Hari Reddy
+# Hari Reddy
 
-Senior Full Stack Software Engineer at [Zions Bancorporation](https://www.linkedin.com/company/zions-bancorporation) · Writer · Story Teller · Jack of many trades
+Full Stack Developer at [Zions Bancorporation](https://www.linkedin.com/company/zions-bancorporation) · Author, [A College Diary](https://www.amazon.com/dp/1544820321?lv=shuf&channelId=500&plpRedirect=mhFallback) · Rated [NCTTA](https://www.nctta.org/) Alumnus
 
 ![Hari Reddy]({{ '/assets/img/profile.jpg' | relative_url }}){:.profile}
 
-I'm a Senior Software Engineer with more than 10 years of experience building software across an unusually wide range of industries — digital marketing, insurance, medical research, enterprise SaaS, financial regulation, and now banking.
+I'm a Senior Software Engineer with more than 10 years of experience building software across a wide range of industries and technology stacks.
 
-The advent of my professional career, soon after my Bachelor's in Computer Science & Engineering, was with software analysis and building CMS applications, digital campaigns, and SEO solutions for mid-size European businesses, then spent several years developing applications for major insurance companies across Europe and North America.
+More than any particular stack, what I've carried from domain to domain is a knack for dropping into a complex, unfamiliar problem space and turning it into software that works, scales, and lasts. That's exactly the kind of experience I can bring to bear on enabling the development and delivery of all kinds of applications.
 
-After completing my Master's in Computer Science & Engineering, I built software for medical equipment at [The UT Arlington Research Institute](https://utari.uta.edu/), worked on product enhancements for a leading enterprise CRM platform with a focus on accessibility and WCAG compliance, and developed tools for a financial regulator that detect anomaly patterns in the datasets of large financial institutions. Today, I engineer the microservices, APIs, and platform integrations that power enterprise data governance at a major regional bank — automating discovery, classification, and compliance across its data ecosystem.
+I like owning problems end to end, from data model to API to the interface someone actually uses — and I care about the craft: accessible UIs, clean architectures, and systems built to evolve rather than just ship.
 
-This path has made me a genuine full-stack generalist. I've shipped production code in many technologies, but more than any particular stack, what I've carried from domain to domain is the same core skill: dropping into a complex, unfamiliar problem space — insurance claims, medical devices, regulatory data, governance policy — and turning it into software that works, scales, and lasts.
+My [curriculum vitae]({{ '/cv/' | relative_url }}) lays out my entire journey — the companies, the roles, and the technologies behind it all.
 
-I like owning problems end to end, from data model to API to the interface someone actually uses. And I care about the craft: accessible UIs, clean architectures, and systems built to evolve rather than just ship.
-
-Outside of work, I'm a jack of many trades: a former footballer who once dreamed of going pro, a sometime writer of poetry and stories, a PC-building tech enthusiast, a decent cook and handyman, and a lover of good anime, stories, and music. My best gigs, though, are at home — husband, dad to the cutest daughter, and loyal servant to a French Bulldog.
+Outside of work, I'm a jack of many trades — a former footballer who once dreamed of going pro, a collegiate table tennis alumnus, a sometime writer of poetry and stories, a PC-building tech enthusiast, a decent cook and handyman, and a lover of good anime, stories, music, among other things — but my best gigs are at home as a husband, dad, and loyal servant to a French Bulldog.
