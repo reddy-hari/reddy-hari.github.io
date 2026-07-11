@@ -30,7 +30,7 @@ except for `_config.yml`, which requires restarting the server.
 
 ## Project layout
 
-```
+```text
 docs/
 ├── _config.yml       # site settings (title, nav, plugins)
 ├── _data/            # structured content (cv.yml, activities.yml)
