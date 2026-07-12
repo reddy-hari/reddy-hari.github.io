@@ -35,6 +35,14 @@ pre, code,
 }
 
 // =====================================================================
+//  Links — Minima underlines on hover; we signal hover by color alone.
+// =====================================================================
+
+a:hover {
+  text-decoration: none;
+}
+
+// =====================================================================
 //  Site-nav links — no underline; bold on hover; the current page's
 //  link stays bold and takes the link color.
 // =====================================================================

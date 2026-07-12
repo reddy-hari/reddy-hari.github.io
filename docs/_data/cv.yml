@@ -18,8 +18,9 @@ basics:
       url: https://www.linkedin.com/in/reddyharikrishna/
 
 # Each section has a `title`, a `type`, and `items`.
-#   type: timeline  -> title / subtitle / date / description(list)
+#   type: timeline  -> title / subtitle / date / description(list) / tags(list, optional)
 #   type: tags      -> a flat list of skill strings grouped by `name`
+#   type: certs     -> title / issuer / date / expires(optional) / url
 sections:
   - title: Education
     type: timeline
@@ -48,6 +49,19 @@ sections:
           - Owned the technical operation and enhancement of enterprise data governance platforms — Collibra for cataloging and BigID for discovery and classification — including integrations with custom-built solutions.
           - Engineered customized data profiling solutions and contributed to a self-service Governance Portal that automated discovery, classification, attestation, and compliance across the data lake and EDW.
           - Served as team security champion, managing SCA report findings and mitigations, and partnered with the Enterprise Data Governance team to turn new standards and policies into automated, technically feasible solutions.
+        tags:
+          [
+            Python,
+            FastAPI,
+            React,
+            Collibra,
+            BigID,
+            PostgreSQL,
+            GCP,
+            Docker,
+            Kubernetes,
+            Helm,
+          ]
       - title: Software Engineer
         subtitle: Financial Industry Regulatory Authority
         date: March 2022 - March 2024
@@ -56,6 +70,18 @@ sections:
           - Developed query engine and ETL features that let technical teams define custom data flows, combine multiple sources, and process large-scale datasets efficiently.
           - Drove delivery while collaborating cross-functionally to improve data accessibility and reliability. in an Agile Scrum environment.
           - Maintained exceptional quality standards, achieving 90% test coverage and keeping post-release defects under 5%.
+        tags:
+          [
+            React,
+            Angular,
+            Java,
+            Spring Boot,
+            Node,
+            AWS,
+            PostgreSQL,
+            Jenkins,
+            Docker,
+          ]
       - title: Software Engineer
         subtitle: Microsoft
         date: March 2020 - March 2022
@@ -64,6 +90,17 @@ sections:
           - Built accessible, standards-compliant UI components with a strong focus on WCAG and accessibility (A11y) best practices.
           - Resolved customer-reported and live-site incidents in real time, ensuring product reliability and a smooth user experience.
           - Established testing and build infrastructure from the ground up — including an automated test suite integrated into the CI/CD pipeline — and partnered with technical teams and management to gather requirements and shape technical designs.
+        tags:
+          [
+            TypeScript,
+            React,
+            Redux,
+            Dynamics 365,
+            Azure,
+            Azure DevOps,
+            Kusto,
+            A11y,
+          ]
       - title: Software Engineer (Research Assistant)
         subtitle: The University of Texas at Arlington Research Institute
         date: March 2022 - March 2024
@@ -72,6 +109,17 @@ sections:
           - Built patient data reporting and analytics portals with interactive reports and graph visualizations for online viewing.
           - Modernized a legacy codebase into a current cross-platform stack, improving compatibility and maintainability.
           - Owned projects end to end — from idea and design through production deployment — while ensuring quality through firmware data testing and UI integration testing.
+        tags:
+          [
+            JavaScript,
+            Electron,
+            React,
+            Vue,
+            Arduino,
+            C++,
+            MongoDB,
+            Data Visualization,
+          ]
       - title: Software Engineer
         subtitle: Accenture
         date: May 2015 - December 2017
@@ -80,6 +128,7 @@ sections:
           - Built and maintained a government eligibility enforcement portal handling claims for child support, unemployment, and other public benefit services.
           - Designed asynchronous features and handled design change requests and production defects, ensuring responsive, reliable applications for enterprise clients.
           - Owned test strategy and quality processes end to end — from automation proof-of-concepts for the CI/CD pipeline to defect lifecycle tracking, root cause analysis, and requirement traceability.
+        tags: [React, Node, Java, SQL Server, Selenium, Tosca, Azure DevOps]
       - title: Software Engineer
         subtitle: GO MO Group
         date: May 2015 - December 2017
@@ -88,6 +137,8 @@ sections:
           - Executed SEO strategies that improved search rankings and organic visibility across multiple client websites.
           - Created content and managed digital marketing campaigns — including social media marketing, on-page optimization, and audience engagement initiatives.
           - Built and customized CMS-driven websites (WordPress) and integrated third-party services, delivering polished web experiences in a fast-paced, client-focused environment.
+        tags:
+          [HTML, CSS, JavaScript, PHP, WordPress, SEO, SMM, Google Analytics]
 
   # - title: Projects
   #   type: timeline
@@ -98,20 +149,58 @@ sections:
   #       description:
   #         - What it does and why it matters.
 
+  # High-level capability areas. The concrete stack per role lives in the
+  # `tags` on each Experience item above — no need to repeat it here.
+  # A group with no `name` renders as one flat, uncategorized block.
   - title: Skills
     type: tags
     items:
-      - name: Languages
-        tags: [Python, JavaScript, TypeScript, Java, Ruby]
-      - name: Frontend
-        tags: [React, Angular, Vue, Redux, HTML, CSS]
-      - name: Backend
-        tags: [FastAPI, Node, Express, Spring Boot]
-      - name: Databases
-        tags: [PostgreSQL, mySQL, SQL Server, Kusto, MongoDB]
-      - name: Cloud
-        tags: [GCP, AWS, Azure]
-      - name: DevOps & Infrastructure
-        tags: [Docker, Kubernetes, Helm, Jenkins, Azure DevOps, Git]
-      - name: AI & Emerging Tech
-        tags: [LLMs, RAG, MCP, Agentic AI, Prompt Engineering, Vector Databases]
+      - tags:
+          [
+            Front End,
+            Back End,
+            RDBMS,
+            NoSQL,
+            GCP,
+            Azure,
+            AWS,
+            SaaS,
+            IaC,
+            DevOps,
+            LLMs,
+            RAG,
+            MCP,
+            Agentic AI,
+            Prompt Engineering,
+            Vector Databases,
+          ]
+
+  # `expires` is optional — omit it for credentials that never lapse.
+  - title: Certifications
+    type: certs
+    items:
+      - title: SAFe® 6 Practitioner
+        issuer: SAFe by Scaled Agile, Inc.
+        date: May 2025
+        expires: May 2027
+        url: https://www.credly.com/badges/20691535-9c89-407a-a6fa-739443d094c6/public_url
+      - title: Microservices - Fundamentals
+        issuer: Coursera — IBM
+        date: June 2020
+        # expires:
+        url: https://coursera.org/share/543299b484c1e81288797c7a791f8154
+      - title: Using Python to Access Web Data
+        issuer: Coursera — University of Michigan
+        date: December 2016
+        # expires:
+        url: https://coursera.org/share/1c7ee9340bf8c566ff6f850775eb0e91
+      - title: Python Data Structures
+        issuer: Coursera — University of Michigan
+        date: November 2016
+        # expires:
+        url: https://coursera.org/share/c29ca2d5f90c5dea42d06d5faedf0393
+      - title: Programming for Everybody
+        issuer: Coursera — University of Michigan
+        date: November 2016
+        # expires:
+        url: https://coursera.org/share/d74d36f63a080a4bcc16b691f3c2ff79

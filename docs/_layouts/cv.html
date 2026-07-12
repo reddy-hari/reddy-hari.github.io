@@ -48,6 +48,24 @@ layout: default
   .cv-item-subtitle { color: #2a7ae2; font-size: .95rem; margin-bottom: .3rem; }
   .cv-item ul { margin: .3rem 0 0; padding-left: 1.1rem; }
   .cv-item li { margin-bottom: .2rem; }
+  .cv-item-tags { margin-top: .6rem; }
+
+  /* certifications */
+  .cv-cert { margin-bottom: 1rem; }
+  .cv-cert:last-child { margin-bottom: 0; }
+  .cv-cert-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .3rem;
+  }
+  .cv-cert-title { font-weight: 600; }
+  .cv-cert-date { font-size: .85rem; color: #828282; white-space: nowrap; }
+  .cv-cert-meta { font-size: .95rem; color: #828282; }
+  .cv-cert-issuer { color: #2a7ae2; }
+  .cv-cert-meta a { color: inherit; }
+  .cv-cert-meta span + span::before { content: "·"; margin: 0 .4rem; }
 
   /* tags */
   .cv-tag-group { margin-bottom: .9rem; }
@@ -91,6 +109,28 @@ layout: default
           {%- for line in item.description %}<li>{{ line }}</li>{% endfor -%}
         </ul>
         {%- endif -%}
+        {%- if item.tags %}
+        <div class="cv-tags cv-item-tags">
+          {%- for tag in item.tags %}<span class="cv-tag">{{ tag }}</span>{% endfor -%}
+        </div>
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+
+    {%- elsif section.type == "certs" %}
+      {%- for item in section.items %}
+      <div class="cv-cert">
+        <div class="cv-cert-head">
+          <span class="cv-cert-title">{{ item.title }}</span>
+          <span class="cv-cert-date">
+            {%- if item.date %}{{ item.date }}{% endif -%}
+            {%- if item.expires %} – {{ item.expires }}{% endif -%}
+          </span>
+        </div>
+        <div class="cv-cert-meta">
+          {%- if item.issuer %}<span class="cv-cert-issuer">{{ item.issuer }}</span>{% endif -%}
+          {%- if item.url %}<span><a href="{{ item.url }}">View credential</a></span>{% endif -%}
+        </div>
       </div>
       {%- endfor -%}
 
